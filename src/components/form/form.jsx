@@ -51,8 +51,8 @@ const Form = () => {
 
   const handleFocus = (e) => {
     setFocused(e.target.name);
-    console.log("focused", focused)
   }
+  
   return (
     <form className={styles.form} onSubmit={formik.handleSubmit}>
       <div className={styles.form__item}>
