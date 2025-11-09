@@ -42,8 +42,9 @@ const Form = () => {
       notification: true,
     },
     validate,
-    onSubmit: values => {
+    onSubmit: (values, {resetForm}) => {
       alert(JSON.stringify(values, null, 2));
+      resetForm()
     },
   });
 
@@ -52,7 +53,7 @@ const Form = () => {
   const handleFocus = (e) => {
     setFocused(e.target.name);
   }
-  
+
   return (
     <form className={styles.form} onSubmit={formik.handleSubmit}>
       <div className={styles.form__item}>
